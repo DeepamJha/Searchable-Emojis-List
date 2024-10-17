@@ -28,7 +28,9 @@ function displayEmojis(filteredEmojis) {
     filteredEmojis.forEach(emoji => {
         const emojiDiv = document.createElement('div');
         emojiDiv.className = 'emoji-item';
-        emojiDiv.innerText = `${emoji.character} - ${emoji.slug}`; // Display emoji and name (slug is used here as a substitute)
+        
+        // Display emoji character and a more friendly name or description
+        emojiDiv.innerText = `${emoji.character} - ${emoji.name || emoji.slug.replace(/-/g, ' ')}`; // Replace hyphens with spaces for readability
 
         const copyBtn = document.createElement('button');
         copyBtn.innerText = 'Copy';
@@ -42,6 +44,7 @@ function displayEmojis(filteredEmojis) {
         emojiList.appendChild(emojiDiv);
     });
 }
+
 
 // Function to handle search
 function handleSearch() {
