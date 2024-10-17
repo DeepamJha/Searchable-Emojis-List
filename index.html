@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Emoji Search</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Searchable Emoji List</h1>
+    <input type="text" id="emojiSearch" placeholder="Search emojis..." />
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="faces">Faces</option>
+      <option value="animals">Animals</option>
+      <option value="objects">Objects</option>
+      <!-- Add more categories as needed -->
+    </select>
+    <div id="emojiList"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
